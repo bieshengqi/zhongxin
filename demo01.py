@@ -1,26 +1,28 @@
+"""
+a = 1
+while a > 0 :
+    for i in range(35,0,-1):
+        print("绿灯还有",i,"秒结束")
+    for i in range(30,0,-1):
+        print("红灯还有",i,"秒结束")
+    for i in range(3,0,-1):
+        print("黄灯还有",i,"秒结束")
+"""
 
-"""
-a = {"name":"花花","age":22,"like":"chil","motto":"星光不负赶路人"}
-print(a["name"])
+xingxi = {}
 
-b=a.get("motto")
-print (b)
-a.update(age=23)
-print(a)
-"""
-a = {
-    "name":"none",
-    "age":"none",
-    "sex":"none"
-    }
+account = input ("请输入账号：")
+password = input("请输入密码：")
 
-a.update(name=input("请输入姓名:"))
-a.update(age=input("请输入年龄:"))
-a.update(sex=input("请输入性别:"))
-"""
-a("name")=input("请输入姓名：")
-a("age")=input("请输入年龄：")
-a("sex")=input("请输入性别：")
-"""
-print("用户的信息为:",a)
+if len(account) < 5 or len(account)>8:
+    print("账号只能为5-8位")
+elif len(password) < 6 or len(password)>12:
+    print("密码只能为6-12位")
+elif not account[0].islower():
+    print("账号必须是小写开头")
+else:
+    xingxi[account]=password
+    print("注册成功",xingxi)
+
+
 
